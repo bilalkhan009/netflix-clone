@@ -1,0 +1,1277 @@
+*,
+*::before,
+*::after {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  --bg-black: black;
+  --text-white: white;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-white);
+  background-color: var(--bg-black);
+}
+
+/* ####### utility ########### */
+.container-lg {
+  max-width: 95%;
+  width: 125rem;
+  margin: auto;
+}
+.container {
+  max-width: 1350px;
+  width: 75%;
+  margin: auto;
+  /* border: 1px solid white; */
+}
+.bg-black {
+  background-color: black;
+}
+.text-white {
+  color: white;
+}
+
+.bg-red-btn {
+  display: inline-block;
+  width: 17rem;
+  background-color: rgb(232, 29, 29);
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: all 300ms linear;
+}
+.bg-red-btn:hover {
+  background-color: rgb(232, 29, 29, 0.85) !important;
+}
+.hover-bottombar:hover {
+  text-decoration: underline;
+}
+
+.align-boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* fonts-size */
+.large-f {
+  font-size: 5rem;
+}
+
+/* ####### header-section styling ########### */
+.header-section {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./../assessts/netflex-bg-img.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* nav-bar */
+.navbar-bef {
+  position: relative;
+}
+.navbar-bef::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: fit-content;
+  padding: 7.5em 0em;
+  background: var(--bg-black);
+  color: var(--text-white);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+}
+.logo-box {
+  width: 18rem;
+  height: 5rem;
+  /* border: 1px solid white; */
+}
+.logo-box a {
+  display: block;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  background: url(./../assessts/netflix-logo.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.sign-btn-box {
+  width: 7.5rem;
+  color: var(--text-white);
+  border-radius: 0.4rem;
+}
+.sign-btn-box a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.3em 0em;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+/* end navbar */
+
+.center-content {
+  /* border: 1px solid white; */
+  width: 90%;
+  margin: 15rem auto 3rem auto;
+  text-align: center;
+}
+.center-content h1 {
+  font-weight: bolder;
+}
+.input-box {
+  width: 60%;
+  /* height: 10rem; */
+  margin: 2rem auto;
+  /* border: 1px solid white!important; */
+}
+.center-content .email-box label {
+  width: 30%;
+  top: 40%;
+  left: 3%;
+}
+.center-content .email-box .input-box:focus ~ label,
+.center-content .input-box:not(:placeholder-shown) ~ label {
+  top: 30% !important;
+  left: -1% !important;
+}
+
+/* .input-box .input{
+    width: 65%;
+    padding: 0.2em;
+    border-radius: 0.7rem;
+    border: 1px solid white;
+}
+.input input{
+    display: block;
+    width: 100%;
+    padding: 1em;
+    color: white;
+    background-color: rgba(37, 37, 37, 0.744);
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+} */
+::placeholder {
+  font-weight: bolder;
+  color: rgba(255, 255, 255, 0.809);
+}
+.input-box .send-btn {
+  width: 33%;
+  border-radius: 0.5rem;
+}
+.send-btn a {
+  display: block;
+  width: 100%;
+  padding: 0.6em;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+/* end header */
+
+/* start sections styling */
+.section {
+  width: 100%;
+  height: 80vh;
+  border-top: 8px solid rgba(232, 232, 232, 0.18);
+  border-bottom: 8px solid rgba(232, 232, 232, 0.18);
+}
+.content-box {
+  width: 50%;
+  /* border: 1px solid white; */
+  padding: 0.5em 1.5em;
+}
+.section .align-boxes {
+  margin: 5rem auto 4rem auto;
+  /* border: 1px solid white; */
+}
+.section h1 {
+  font-weight: bolder;
+}
+.section p {
+  font-size: 2rem;
+  word-spacing: 3px;
+}
+
+.tv-img-box {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  /* border: 1px solid white; */
+}
+.tv-img-box img {
+  display: block;
+  width: 100%;
+}
+.download-box {
+  width: 60%;
+  height: 9rem;
+  background-color: black;
+  border: 2px solid rgba(232, 232, 232, 0.18);
+  border-radius: 1rem;
+  position: absolute;
+  left: 20%;
+  bottom: 5%;
+}
+.download-box .download-icon {
+  width: 5rem;
+  height: 5rem;
+  background: url(./../assessts/download-icon.gif) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 50%;
+  /* border: 1px solid white; */
+}
+.tv-img-box .hosting-vid {
+  display: inline-block;
+  width: 73%;
+  height: 190px;
+  position: absolute;
+  top: 21%;
+  left: 13%;
+  z-index: -1;
+  /* border: 1px solid white; */
+}
+
+/* question and answer section */
+.w3-btn {
+  position: relative;
+  transition: all 400ms linear;
+}
+.w3-btn:hover {
+  background-color: rgba(124, 124, 124, 0.38) !important;
+}
+/* .plus-icon{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 25%;
+    right: 2%;
+    background: url(./../assessts/add.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 9;
+} */
+.plus-icon {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+}
+.plus-icon .icon-rel {
+  display: block;
+  width: 100%;
+  height: inherit;
+  position: relative;
+  /* border: 1px solid red; */
+}
+.plus-icon .part {
+  width: 100%;
+  height: 0.4rem;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.818);
+}
+.plus-icon .part1 {
+  position: absolute;
+  top: 40%;
+}
+.plus-icon .part2 {
+  position: absolute;
+  top: 40%;
+  transform: rotate(90deg);
+}
+
+/* footer-section */
+.footer-section {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 5em;
+}
+.links-box {
+  width: 33%;
+  height: fit-content;
+  /* border: 1px solid white; */
+}
+.links-box p {
+  padding-top: 0.7em;
+  color: lightgray;
+}
+.links-box a {
+  text-decoration: underline;
+}
+.links-box a:hover {
+  text-decoration: none;
+}
+.links-box select {
+  width: 13rem;
+  margin-top: 3.5rem;
+  padding: 0.4em 1em;
+  color: var(--text-white);
+  background: url(./../assessts/global.png) no-repeat, black;
+  background-position: left center;
+  background-size: 2rem;
+  text-align: center;
+  border-radius: 0.4rem;
+}
+
+/* ######### signup page styling ######### */
+.reduce-black {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./../assessts/netflex-bg-img.jpg) no-repeat;
+  background-size: cover;
+}
+.form-box {
+  max-width: 700px;
+  width: 38%;
+  height: fit-content;
+  margin: 3rem auto;
+  padding: 4em;
+  background-color: rgba(0, 0, 0, 0.648);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px 0px rgba(113, 113, 113, 0.131);
+}
+.form-box .form {
+  width: 100%;
+  margin: auto;
+}
+.form h2 {
+  font-size: 3rem;
+}
+.email-box {
+  width: 100%;
+  position: relative;
+}
+.email-box .input-box {
+  display: block;
+  color: var(--text-white);
+  background: rgb(55, 55, 55);
+  width: 100%;
+  height: fit-content;
+  font-size: 1.5rem;
+  padding: 1.3em 1em 0.2em 1em;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  transition: all 150ms linear;
+}
+.email-box label {
+  width: 50%;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 30%;
+  left: 3%;
+  text-align: left;
+  color: rgb(176, 176, 176);
+  transition: all 150ms linear;
+}
+.email-box .input-box:focus {
+  background: rgb(75, 75, 75);
+}
+.email-box .input-box:focus ~ label,
+.email-box .input-box:not(:placeholder-shown) ~ label {
+  top: 15%;
+  left: 4%;
+  font-size: 1.1rem;
+}
+
+.submit-btn input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--text-white);
+  background-color: rgb(232, 29, 29);
+  padding: 0.6em;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+.check-box label,
+.left-text {
+  font-size: 1.4rem;
+  color: rgb(176, 176, 176);
+}
+
+.left-text:hover {
+  text-decoration: underline;
+}
+.form-footer {
+  margin: 7rem auto 2rem auto;
+  color: rgb(176, 176, 176);
+}
+.form-footer .bold-link {
+  color: white;
+  font-weight: bolder;
+}
+.form-footer .tiny-text {
+  font-size: 1.3rem;
+  padding-top: 1em;
+  padding-right: 0.3em;
+  line-height: 2rem;
+}
+
+.bottom-section {
+  position: absolute;
+  bottom: 0%;
+  height: fit-content;
+  background-color: rgba(0, 0, 0, 0.79);
+  box-shadow: 1px 0px 10px rgba(255, 255, 255, 0);
+}
+.bottom-section a {
+  text-decoration: none;
+  color: rgb(176, 176, 176);
+  font-size: 1.4rem;
+}
+.bottom-section a:hover {
+  text-decoration: underline;
+}
+
+/* ContactUs and help section styling */
+.left-side-border {
+  padding: 0.8em 1em;
+}
+.left-side-border a {
+  display: block;
+  font-size: 2rem;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding-left: 0.8em;
+  border-left: 1px solid white;
+}
+.buttons .btn {
+  width: 12rem;
+  background-color: rgb(232, 29, 29);
+  border-radius: 0.3rem;
+}
+.buttons .join-btn {
+  background-color: black;
+  border: 1px solid white;
+  transition: all 300ms linear;
+}
+.buttons .join-btn:hover {
+  background-color: white;
+  color: var(--bg-black);
+}
+.buttons a {
+  display: block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.4em 0.8em;
+  text-align: center;
+}
+.issue-box input {
+  display: block;
+  width: 100%;
+  padding: 0.7em 1em;
+  border: 1px solid lightgray;
+  outline: none;
+}
+.issue-box ::placeholder {
+  color: gray;
+  font-weight: lighter;
+}
+.issue-box .right-arrow-icon {
+  display: block;
+  position: absolute;
+  top: 30%;
+  right: 2%;
+  width: 2.5rem;
+  height: 2rem;
+  background: url(./../assessts/right-arrow.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.5;
+  visibility: hidden;
+}
+.issue-box input:focus ~ .right-arrow-icon {
+  visibility: visible;
+}
+.contactUs-box .links-box {
+  width: 100%;
+  padding: 0.5em 0em 0.8em 0em;
+  border-bottom: 1px solid lightgray;
+}
+.contactUs-box .links-box a {
+  background: url(./../assessts/angle-braket.png) no-repeat;
+  background-position: right center;
+  background-size: 1.5rem;
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  font-size: 1.6rem;
+  color: rgb(55, 55, 55);
+  text-decoration: none;
+}
+.contactUs-box .links-box a:hover {
+  text-decoration: underline;
+  background-size: 1.7rem;
+  color: black;
+}
+
+.select-box {
+  width: 20rem;
+  /* border: 1px solid white; */
+}
+.select-box select {
+  width: 100%;
+  padding: 0.7em;
+  color: white;
+  background: none;
+  color: rgb(55, 55, 55);
+  transition: all 400ms linear;
+}
+.select-box select:hover {
+  background-color: rgba(255, 255, 255, 0.609);
+  cursor: pointer;
+}
+.select-box select option {
+  color: black;
+  text-transform: capitalize;
+}
+.remove-underline a {
+  text-decoration: none;
+}
+.remove-underline a:hover {
+  text-decoration: underline;
+}
+
+/* FAQ section stylying */
+.back-btn .left-arrow-icon {
+  display: inline-block;
+  background: url(./../assessts/left-arrow.png) no-repeat;
+  background-position: left center;
+  background-size: 1.3rem;
+  padding: 0.4em 0.5em;
+}
+.back-btn a:hover {
+  text-decoration: underline;
+}
+.back-btn a:hover .left-arrow-icon {
+  background-size: 1.2rem;
+}
+.img-box {
+  max-width: 125rem;
+  width: 70%;
+  height: fit-content;
+  margin: 3rem 0rem 2rem 0rem;
+}
+.img-box img {
+  display: block;
+  width: 100%;
+  height: 45rem;
+}
+.img-desc {
+  max-width: 125rem;
+  width: 70%;
+  height: fit-content;
+  margin: 2rem 0rem;
+  padding-bottom: 3em;
+  border-bottom: 1px solid lightgray;
+}
+.img-desc p {
+  font-size: 1.6rem;
+}
+.img-desc span:hover {
+  text-decoration: underline;
+}
+.rel-articel-box {
+  width: 30rem;
+  height: fit-content;
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.red-line {
+  width: 100%;
+  position: relative;
+  padding: 1em;
+}
+.red-line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border: 3px solid rgb(232, 29, 29);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.red-line h4 {
+  margin: 0rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.red-line .articel-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 1em;
+  /* border: 1px solid green; */
+}
+.red-line .articel-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  background: url(./../assessts/news.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.red-line a {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  padding-top: 0.3em;
+  padding-left: 1em;
+}
+.red-line a:hover {
+  color: rgb(112, 111, 111);
+}
+
+.hover-gray:hover {
+  background-color: lightgray !important;
+}
+.leftbar {
+  padding-left: 0.8em;
+  border-left: 4px solid rgb(196, 196, 196);
+}
+.order-list {
+  padding: 1em 1.5em;
+}
+.order-list li {
+  padding: 0.5em 0em;
+  list-style: decimal;
+}
+.f-btn {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-weight: normal;
+  cursor: pointer;
+  margin-left: 1rem;
+  border-bottom: 1px solid black;
+}
+
+/* Help section styling */
+.help-center-box {
+  width: 60%;
+  margin: 1.5rem auto;
+  text-align: center;
+  /* border: 1px solid white; */
+}
+.help-center-box h2 {
+  font-weight: bold;
+}
+.help-center-box input {
+  display: block;
+  width: 100%;
+  padding: 0.8em 0em 0.8em 3.5em;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+}
+.help-center-box .search-icon {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background: url(./../assessts/search-icon.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 1%;
+  /* border: 1px solid green; */
+}
+.help-center-box ::placeholder {
+  color: gray;
+  font-weight: normal;
+}
+.topics-boxes .box {
+  position: relative;
+  /* text-align: end; */
+}
+.topics-boxes .articel-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(./../assessts/news.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+.topics-boxes a {
+  display: block;
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-left: 3rem;
+  padding: 0.8em 1.3em;
+}
+.topics-boxes a:hover {
+  color: rgb(232, 29, 29);
+  text-decoration: underline;
+}
+.links-section .box {
+  width: 20%;
+  padding: 0em 3.5em 0em 0em;
+  /* border: 1px solid red; */
+}
+.links-section h3 {
+  font-weight: bold;
+  margin: 0rem 0rem 2rem 0rem;
+}
+.links-section p {
+  margin: 1rem 0rem;
+  word-spacing: normal;
+}
+.links-section a {
+  width: 100%;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+.links-section a:hover {
+  color: red;
+  text-decoration: underline;
+}
+.links-section .right-arrow {
+  background: url(./../assessts/angle-braket.png) no-repeat;
+  background-size: 1.5rem;
+  background-position: right center;
+}
+.links-section a:hover.right-arrow {
+  background-size: 1.3rem;
+}
+
+/* layout for different width size */
+@media (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header-section {
+    background: var(--bg-black);
+    padding-bottom: 0em !important;
+    height: fit-content;
+    /* border: 1px solid white; */
+  }
+  .sm-bg-img {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(./../assessts/netflex-bg-img.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .center-content {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .large-f {
+    font-size: 3.5rem;
+  }
+  .header-section h3 {
+    font-size: 2.3rem;
+  }
+  .logo-box {
+    width: 10rem;
+    height: 3rem;
+  }
+  .section {
+    height: fit-content;
+  }
+  .sm-dev {
+    height: fit-content !important;
+    flex-direction: column;
+  }
+  .container {
+    width: 100% !important;
+    height: fit-content;
+    margin: 0% auto;
+    padding: 0em 1em;
+    /* border: 1px solid red; */
+  }
+  .content-box {
+    width: 100%;
+    text-align: center;
+    padding: 0em;
+    order: 9;
+    /* border: 1px solid red; */
+  }
+  .content-box .sm-inline {
+    display: inline-block !important;
+  }
+  .heading-first {
+    order: 5;
+  }
+  .tv-img-box .hosting-vid{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+  }
+  .form-box {
+    width: 95%;
+    margin: 0% auto;
+    padding: 0em;
+  }
+  .input-box {
+    width: 100% !important;
+    /* border: 1px solid red; */
+  }
+  .email-box label {
+    width: 40% !important;
+    left: 3% !important;
+  }
+  .email-box .input-box {
+    padding: 1.5em 1em 0.5em 1em;
+  }
+  .center-content .email-box .input-box:focus ~ label,
+  .center-content .input-box:not(:placeholder-shown) ~ label {
+    top: 30% !important;
+    left: 4% !important;
+  }
+  .submit-btn input {
+    padding: 0.8em;
+  }
+  .form-footer {
+    margin-top: 3rem;
+  }
+  .bottom-section {
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    padding: 0em 1em;
+    padding: 0em 1em 3em 1em;
+    border-top: 1px solid lightgray;
+  }
+  .questions-box button {
+    padding: 0.5em auto !important;
+  }
+
+  /* contactUs page styling */
+  .navbar {
+    padding: 0.8em !important;
+  }
+  .navbar .container {
+    max-width: 90% !important;
+  }
+  .navbar .left-side-border {
+    margin-left: 0.5rem;
+    padding: 0% !important;
+    /* border: 1px solid red; */
+  }
+  .navbar .left-side-border a {
+    font-size: 1.7rem;
+    padding-left: 0.5em;
+  }
+  .navbar .logo-box {
+    width: 10rem !important;
+    height: 3rem !important;
+  }
+
+  .contactUs-box .container {
+    max-width: 90% !important;
+    padding: 0em 1em !important;
+  }
+  .contactUs-box h3 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Help section styling */
+  .help-center-box {
+    width: 100%;
+  }
+  .topics-boxes {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .topics-boxes .box {
+    width: 100% !important;
+    margin: 1rem auto;
+    padding: 0.5em;
+    border-radius: 0.3rem;
+  }
+  .topics-boxes .articel-icon {
+    top: 30%;
+  }
+  .links-section .align-boxes {
+    flex-direction: column;
+  }
+  .links-section .box {
+    width: 100% !important;
+    margin: 1rem 0rem;
+    padding: 0em;
+  }
+  .links-section p {
+    padding: 0em !important;
+  }
+  .links-section a {
+    background: url(./../assessts/angle-braket.png) no-repeat;
+    background-size: 1.5rem;
+    background-position: right center;
+  }
+
+  .footer-section {
+    padding: 2em 0em;
+  }
+  .footer-section .links-box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 950px) {
+  html {
+    font-size: 55%;
+  }
+  .header-section {
+    background: var(--bg-black);
+    padding-bottom: 1em !important;
+    height: fit-content;
+    /* border: 1px solid white; */
+  }
+  .sm-bg-img {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(./../assessts/netflex-bg-img.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .center-content {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .large-f {
+    font-size: 3.5rem;
+  }
+  .input-box {
+    width: 90% !important;
+    margin: 0%;
+    /* border: 1px solid red; */
+  }
+  .input-box .input {
+    width: 100%;
+  }
+  .email-box label {
+    width: 40% !important;
+    top: 30% !important;
+    left: 1% !important;
+  }
+  .header-section h3 {
+    font-size: 2.3rem;
+  }
+  .logo-box {
+    width: 10rem;
+    height: 3rem;
+  }
+  .section {
+    height: fit-content;
+  }
+  .container {
+    width: 100% !important;
+    height: fit-content;
+    margin: 0% auto;
+    padding: 0em 1em;
+    /* border: 1px solid red; */
+  }
+  .container-lg{
+    padding: 0em 0.5em;
+  }
+  .sm-dev {
+    height: fit-content !important;
+    flex-direction: column;
+  }
+  .content-box {
+    width: 100%;
+    text-align: center;
+    padding: 0em;
+    order: 9;
+    /* border: 1px solid red; */
+  }
+  .content-box .sm-inline {
+    display: inline-block !important;
+  }
+  .heading-first {
+    order: 5;
+  }
+  .center-content .input-box {
+    margin: auto;
+  }
+  .center-content .email-box .input-box:focus ~ label,
+  .center-content .input-box:not(:placeholder-shown) ~ label {
+    top: 15% !important;
+    left: 8% !important;
+  }
+  .logo-box {
+    width: 10rem;
+    height: 3rem;
+  }
+  .tv-img-box .hosting-vid {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    /* border: 1px solid white; */
+  }
+  .form-box {
+    width: 95%;
+    margin: 0% auto;
+    padding: 0em;
+  }
+  .form-box .input-box {
+    width: 100% !important;
+  }
+  .form-box .password {
+    margin: 2rem 0rem;
+  }
+  .form-box .email-box .input-box:focus ~ label,
+  .form-box .email-box .input-box:not(:placeholder-shown) ~ label {
+    top: 17% !important;
+    left: 2%!important;
+  }
+  .email-box .input-box {
+    padding: 1.5em 1em 0.5em 1em;
+  }
+  .email-box label {
+    left: 8%!important;
+    text-align: left;
+  }
+  .form-box  .email-box label {
+    left: 3%!important;
+  } 
+  .submit-btn input {
+    padding: 0.8em;
+  }
+  .form-footer {
+    margin-top: 3rem;
+  }
+  .bottom-section {
+    position: absolute;
+    top: 105%;
+    width: 100%;
+    padding: 0em 1em 3em 1em;
+    border-top: 1px solid lightgray;
+  }
+
+  /* contactUs page styling */
+  .navbar {
+    padding: 1em !important;
+  }
+  .navbar .container {
+    max-width: 90% !important;
+  }
+  .navbar .left-side-border {
+    margin-left: 0.5rem;
+    padding: 0% !important;
+  }
+  .navbar .left-side-border a {
+    font-size: 1.7rem;
+    padding-left: 0.5em;
+  }
+  .contactUs-box .container {
+    max-width: 90% !important;
+    padding: 0em 1em !important;
+  }
+
+  /* FAq-section */
+  .pad-bottom{
+    padding-bottom: 18em;
+  }
+  .img-box,
+  .img-desc{
+    width: 100%;
+  }
+  .rel-articel-box{
+    width: 95%;
+    top: 93%;
+    left: 2%;
+  }
+
+
+  /* help section */
+  .help-center-box {
+    width: 80%;
+  }
+  .help-center-box .input-box {
+    margin: auto;
+  }
+  .topics-boxes {
+    max-width: 100%!important;
+    flex-wrap: wrap;
+  }
+  .topics-boxes .box {
+    width: 100% !important;
+    margin: 1rem auto;
+    padding: 0.5em;
+    border-radius: 0.3rem;
+  }
+  .topics-boxes .articel-icon {
+    top: 30%;
+    left: 2%;
+  }
+  .links-section .box {
+    width: 48% !important;
+    margin: 1rem 0rem;
+    padding: 0em;
+    /* border: 1px solid red; */
+  }
+  .links-section p {
+    padding: 0em !important;
+  }
+  .links-section a {
+    background: url(./../assessts/angle-braket.png) no-repeat;
+    background-size: 1.5rem;
+    background-position: right center;
+  }
+
+  .footer-section {
+    padding: 2em 0em;
+  }
+  .sm-full a,
+  .sm-full h3 {
+    width: 100%;
+    margin: 0.5rem 0rem !important;
+  }
+  .footer-section .links-box {
+    width: 100%;
+  }
+}
+@media (min-width: 601px) and (max-width: 750px) {
+  .center-content .input-box {
+    margin: auto;
+  }
+  .center-content .email-box .input-box:focus ~ label,
+  .center-content .input-box:not(:placeholder-shown) ~ label {
+    top: 15% !important;
+  }
+  .form-box {
+    width: 95%;
+    margin: 0% auto;
+    padding: 0em;
+  }
+  .form-box .input-box {
+    width: 100% !important;
+  }
+  .form-box .password {
+    margin: 2rem 0rem;
+  }
+  .email-box .input-box {
+    padding: 1.5em 1em 0.5em 1em;
+  }
+  .email-box label {
+    left: 9%!important;
+  }
+  .form-box  .email-box label {
+    left: 3%!important;
+  } 
+}
+
+@media (min-width: 951px) and (max-width: 1350px) {
+  .header-section {
+    padding-bottom: 0em;
+    height: fit-content;
+    /* border: 1px solid white; */
+  }
+  .container,
+  .container-lg,
+  .section{
+    height: fit-content!important;
+    margin: 1rem auto!important;
+  }
+  .container,
+  .container-lg{
+    width: 95%;
+  }
+  .reduce-pad{
+    padding: 0em;
+  }
+  .left-align .tv-img-box{
+    margin: 0%!important;
+  }
+  .left-align .download-box{
+    left: 10%;
+    width: 80%;
+  }
+  .tv-img-box .hosting-vid {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .form-box {
+    width: 40rem;
+    padding: 2em;
+    /* border: 1px solid red; */
+  }
+  .email-box .input-box {
+    padding: 1.5em 1em 0.5em 1em;
+  }
+  .center-content .email-box .input-box:focus ~ label,
+  .center-content .email-box .input-box:not(:placeholder-shown) ~ label {
+    left: 4%!important;
+  }
+  .submit-btn input {
+    padding: 0.8em;
+  }
+  .form-footer {
+    margin: 8rem auto;
+    /* border: 1px solid red; */
+  }
+  .links-section .align-boxes{
+    justify-content: flex-start;
+  }
+  .links-section .box {
+    width: 31% !important;
+    margin: 1rem;
+    padding: 0em;
+    /* border: 1px solid red; */
+  }
+  .links-section .box3{
+    order: 3;
+  }
+  .links-section .box4{
+    order: 2;
+  }
+  .bottom-section {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    padding: 2em 1em;
+    /* border: 1px solid red; */
+  }
+  .bottom-section .container {
+    width: 90%;
+  }
+  .show-med {
+    display: block !important;
+  }
+  .hide-med {
+    display: none;
+  }
+}
