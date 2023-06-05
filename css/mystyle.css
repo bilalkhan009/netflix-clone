@@ -247,26 +247,63 @@ body {
 }
 
 /* question and answer section */
-.w3-btn {
-  position: relative;
-  transition: all 400ms linear;
-}
 .w3-btn:hover {
   background-color: rgba(124, 124, 124, 0.38) !important;
 }
-/* .plus-icon{
-    display: block;
-    width: 4rem;
-    height: 4rem;
-    position: absolute;
-    top: 25%;
-    right: 2%;
-    background: url(./../assessts/add.png) no-repeat;
-    background-position: center center;
-    background-size: cover;
-    z-index: 9;
-} */
-.plus-icon {
+.popup-btn{
+  position: relative;
+}
+.popup-btn .checkbox{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 3%;
+  right: 1%;
+  z-index: 5;
+  opacity: 0;  
+}
+.plus-btn{
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  width: 4rem;
+  height: 4rem;
+  /* background-color: white; */
+}
+.plus-btn .lines{
+  position: absolute;
+  top: 3%;
+  right: 1%;
+  width: 4rem;
+  height: 4rem;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.plus-btn .line{
+  display: block;
+  width: 100%;
+  height: 0.7rem;
+  background-color: rgba(255, 255, 255, 0.818);
+  transition: all 250ms linear;
+}
+.lines .line2{
+  display: none;
+}
+.plus-btn .lines .line1{
+  margin-top: 2.3rem;
+  transform: rotate(90deg);
+}
+.plus-btn .lines .line3{
+  transform: translateY(-130%);
+}
+.plus-btn .checkbox:checked ~ .lines .line1{
+  transform: rotate(180deg);
+}
+/*.plus-btn {
   display: block;
   width: 4rem;
   height: 4rem;
@@ -274,28 +311,53 @@ body {
   top: 25%;
   right: 2%;
 }
-.plus-icon .icon-rel {
+.plus-btn .checkbox{
+  position: absolute;
   display: block;
   width: 100%;
-  height: inherit;
-  position: relative;
-  /* border: 1px solid red; */
+  height: 100%;
+  top: 3%;
+  right: 1%;
+  z-index: 5;
+  opacity: 0;
 }
-.plus-icon .part {
-  width: 100%;
-  height: 0.4rem;
+.plus-btn .lines{
+  position: absolute;
+  top: 3%;
+  right: 1%;
+  width: 4rem;
+  height: 4rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.plus-btn .line{
   display: block;
+  width: 100%;
+  height: 0.7rem;
   background-color: rgba(255, 255, 255, 0.818);
+  transition: all 200ms linear;
 }
-.plus-icon .part1 {
-  position: absolute;
-  top: 40%;
+.plus-btn .lines .line1{
+  transform-origin: 0% 0%;
 }
-.plus-icon .part2 {
-  position: absolute;
-  top: 40%;
-  transform: rotate(90deg);
+.plus-btn .lines .line3{
+  transform-origin: 0% 100%;
 }
+.plus-btn .checkbox:checked ~ .lines .line1{
+  transform: rotate(55deg);
+}
+.plus-btn .checkbox:checked ~ .lines .line2{
+  display: none;
+}
+.plus-btn .checkbox:checked ~ .lines .line3{
+  transform: rotate(-55deg);
+} */
+
+
+
 
 /* footer-section */
 .footer-section {
@@ -897,6 +959,20 @@ body {
     font-size: 1.8rem !important;
   }
 
+  /* FAq-section */
+  .pad-bottom{
+    padding-bottom: 18em;
+  }
+  .img-box,
+  .img-desc{
+    width: 100%;
+  }
+  .rel-articel-box{
+    width: 95%;
+    top: 93%;
+    left: 2%;
+  }
+
   /* Help section styling */
   .help-center-box {
     width: 100%;
@@ -1227,7 +1303,7 @@ body {
   .form-box {
     width: 40rem;
     padding: 2em;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   /* .email-box .input-box {
     padding: 1.5em 1em 0.5em 1em;
@@ -1267,6 +1343,10 @@ body {
   }
   .bottom-section .container {
     width: 90%;
+  }
+  .rel-articel-box{
+    right: 0%;
+    margin-right: 1rem;
   }
   .show-med {
     display: block !important;
