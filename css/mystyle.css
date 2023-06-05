@@ -146,7 +146,7 @@ body {
 .center-content .email-box .input-box:focus ~ label,
 .center-content .input-box:not(:placeholder-shown) ~ label {
   top: 30% !important;
-  left: -1% !important;
+  left: 4% !important;
 }
 
 /* .input-box .input{
@@ -1227,15 +1227,15 @@ body {
   .form-box {
     width: 40rem;
     padding: 2em;
-    /* border: 1px solid red; */
+    border: 1px solid red;
   }
-  .email-box .input-box {
+  /* .email-box .input-box {
     padding: 1.5em 1em 0.5em 1em;
-  }
-  .center-content .email-box .input-box:focus ~ label,
+  } */
+  /* .center-content .email-box .input-box:focus ~ label,
   .center-content .email-box .input-box:not(:placeholder-shown) ~ label {
     left: 4%!important;
-  }
+  } */
   .submit-btn input {
     padding: 0.8em;
   }
